@@ -1,0 +1,5 @@
+#!/bin/bash
+
+yacc -d proyecto.y
+lex proyecto.l
+g++ y.tab.c lex.yy.c -o programa

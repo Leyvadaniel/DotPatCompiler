@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+./programa
+./decoder
+#cat ArduinoCode.ino
+rm -r ArduinoCode
+mkdir ArduinoCode
+mv ArduinoCode.ino ArduinoCode 
+cd arduino-1.6.6
+./arduino ../ArduinoCode/ArduinoCode.ino --verify
+#./arduino ../ArduinoCode/ArduinoCode.ino --upload
+./arduino ../ArduinoCode/ArduinoCode.ino
+

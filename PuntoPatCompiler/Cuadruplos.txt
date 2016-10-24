@@ -1,0 +1,66 @@
+goto 2
+mod main
+var int valorLlegadaUno
+var int valorLlegadaDos
+var int valorLlegadaTres
+var int suma
+var int resta
+var int mult
+var int termina
+var int respuesta
+var bool x
+- 0 3 temp.1
+= temp.1 suma
+- 0 1 temp.2
+= temp.2 resta
+- 0 2 temp.3
+= temp.3 mult
+- 0 4 temp.4
+= temp.4 termina
+= true x
+== x true temp.5
+gotoF temp.5 66
+print 'V'
+print '1'
+recieve valorLlegadaUno
+print valorLlegadaUno
+send_b valorLlegadaUno
+print 'V'
+print '2'
+recieve valorLlegadaDos
+print valorLlegadaDos
+send_b valorLlegadaDos
+print 'O'
+print 'P'
+recieve valorLlegadaTres
+print valorLlegadaTres
+send_bool true
+send_bool false
+send_bool true
+send_bool false
+== valorLlegadaTres suma temp.6
+gotof temp.6 47
++ valorLlegadaUno valorLlegadaDos temp.7
+= temp.7 respuesta
+send_b respuesta
+ifend mod
+== valorLlegadaTres resta temp.8
+gotof temp.8 53
+- valorLlegadaUno valorLlegadaDos temp.9
+= temp.9 respuesta
+send_b respuesta
+ifend mod
+== valorLlegadaTres mult temp.10
+gotof temp.10 59
+* valorLlegadaUno valorLlegadaDos temp.11
+= temp.11 respuesta
+send_b respuesta
+ifend mod
+== valorLlegadaTres termina temp.12
+gotof temp.12 63
+= false x
+ifend mod
+print 'R'
+print respuesta
+goto 21
+end file
